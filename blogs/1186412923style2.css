@@ -1,0 +1,101 @@
+* {
+    margin:0;
+    padding:0;
+
+}
+
+
+body {
+    background-color:royalblue ;
+    font-family: 'Exo 2', sans-serif;
+
+}
+
+.parent {
+    background-color: white;
+    width: 600px;
+    height:300px;
+     position: relative; 
+}
+
+
+
+
+.square {
+    width:200px;
+    height:200px;
+    background-color: red;
+    position: absolute;
+
+    animation-name: speed;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-direction: reverse;
+
+    
+}
+
+/* must have the 0% and then 100% do whatever in between*/
+@keyframes speed {
+    0% {
+        background-color: red;
+        top:0;
+        left:0;
+    }
+
+    50% {
+        background-color: blue;
+        background-image: url(city.jpg);
+        background-size: cover;
+        top:0;
+        left:200px;
+    }
+    100% {
+        background-color: yellow;
+        background-image: url(city.jpg);
+        background-size: cover;
+        top:0;
+        left:400px;
+    }
+}
+
+
+.slider {
+    width:500px;
+    height:300px;
+    margin: 100px auto;
+
+    background-image: url(city.jpg);
+    background-size: cover;
+    
+    animation-name: slide;
+    animation-duration: 8s;
+     /* animation-timing-function: linear;  */
+    animation-iteration-count: infinite;
+    
+}
+
+@keyframes slide {
+    0%{
+        background-image: url(city.jpg);
+        background-size: cover;
+    }
+
+    25%{
+        background-image: url(hse1.jpg);
+        background-size: cover;
+    }
+
+    50%{
+        background-image: url(hse2.jpg);
+        background-size: cover;
+
+    }
+
+    100%{
+        background-image: url(hse4.jpg);
+        background-size: cover;
+    }
+
+}

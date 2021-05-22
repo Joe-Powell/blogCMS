@@ -1,0 +1,15 @@
+add some columns to database and in admin.php  Read more...
+add a column for url afterthe readme
+
+
+=======================================================
+lets use 
+        
+        $file_destination = './blogs/' . $fileName;
+        move_uploaded_file($fileTmpName, $file_destination);
+
+to upload and save a blog?
+
+must be a .txt file to be able to read
+
+=====================================

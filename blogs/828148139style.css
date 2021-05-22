@@ -1,0 +1,44 @@
+* {
+    margin:0;
+    padding:0;
+
+}
+
+
+body {
+    background-color:royalblue ;
+    font-family: 'Exo 2', sans-serif;
+
+}
+
+.parent {
+    background-color: white;
+    width: 600px;
+    height:300px;
+     position: relative; 
+}
+
+.container {
+    width: 80%;
+    height: 200px;
+    margin: auto;
+    background-color: yellow;
+    position: relative;
+
+}
+
+.square {
+    width:100px;
+    height:100px;
+    background-color: red;
+    position: absolute;
+    /*
+      looks for
+     a parent with the position of 
+     relative or will go past
+     top:10px; 
+    left:20px; */
+
+    bottom:0px;
+    right: 0px;
+}

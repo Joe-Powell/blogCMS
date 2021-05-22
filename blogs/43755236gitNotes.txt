@@ -1,0 +1,149 @@
+			
+			
+			
+			
+			TOUCH 
+				creates new file
+				touch style.css 
+				
+		    OPEN IN VISUAL STUDIO,
+				just type code .    enter  while in the directory
+			
+		1/  right click on file to bash here and be in directory
+		2/   must do! git init INNITIALIZES GIT REPOSITORY
+
+				git status shows what files are staged 
+				git config --global user.name 'joe powell'
+				git add index.html  you can add changes 
+				
+				git status 
+				git add *.html will commit all .html files to staging
+				git rm --cached index.html  removes index.html 
+				get add .    will add everything    you can add changes also
+				
+				so when you make a change to the file, and then check git status,
+				it  will show modified ndex.html so just do git add index.html
+				or...  git add .   to save changes, it is not commited yet 
+				
+					-----------------------------------------------------------------------------------------------------------------------------------------------
+	GIT BASH COMMANDS   & ssh digital ocean
+	----------------------------------------------------------------------------------
+		---sudo when using a username---
+	
+	ls   -> see directories
+	ls -a -> shows directories and invisable/hidden ones too!
+	cd / -> see root directory  
+	cd  ->  back to home direcctory
+	cd .. -> back one directory
+	mkdir test -> Creates a folder/directory named test. sudo when needed ..
+	touch  -> makes a file, sudo when needed ...
+	rm -> delete a file   rm file1.txt , sudo when needed ...
+	rmdir -> remove a directory    rmdir dir2, sudo when needed ...
+	rm -R dir2     ->  if directory is not empty  ,sudo when needed 
+	cat -> this is for showing the contents within a file
+	less -> shows file only, q to exit..
+	pwd -> shows what directory your in
+	~ -> from home directory
+	clear  -> clears terminal
+	
+	nano -> commandline text editor   nano gitNotes.txt 
+	ctrl x to exit nano
+	
+		--Rename a file--
+	mv -> rename a file   mv file1.txt file2.txt ,sudo when needed 
+			--OR--
+	mv -> rename a file   sudo  mv file1.txt file2.txt  ,sudo when needed 
+		--Or Move--
+	mv   /home/joey/react_app/build/* /var/www/html   => move file sudo when needed 
+	,
+	cp -> to copy a file   cp file2.txt filenameOfCopy.txt 
+	
+	cat filenameOfCopy.txt   spits out contents to see
+	
+	copy to other locations
+	cp file1.txt ~/dir2/file3.txt  ,sudo when needed 
+	which -> searches for file or folder location location
+	which mongod    // /usr/bin/mongod
+	sudo when not logged in as root user
+	
+	
+	
+	---------------------------
+	cd test   
+	touch test.txt   makes a file inside that folder
+	---------------------------------------------------
+	
+	Remove folder
+	cd
+	rm -rf test
+				
+				
+				
+			TO COMMIT,wq
+					git commit  cant type anymore so click i to go into insert mode
+					you must enter a commit message first not commented out to commit 
+					you can remove a # comment if you want
+					then you can type to get OUT hit esc :wq then enter 
+					
+					WHEN COMMITING YOU CAN SKIP THE EDIT STAGE in git bash by typing 
+						git commit -m 'this is the message'  then enter  this will add the message
+						since it must have a message...
+					
+					so thats how you create a commit to master. any changes you make
+					after that and save it, it wont be saved to master unless you commit it.
+					even though its changes, its not in git master. 
+					when you git add, your adding it to the staging area, then you can
+					commit after that.... so first add to staging then add to master after that....
+					
+					
+				
+				make files that wont get added to staging .gitignore     traversey 18:10
+					touch .gitignore, you cant create in the explorer directory, use cmd or bash
+					a file wont get added to the staging area when filename is inside gitignore file 
+					for example when you when you git add . // adds all to staging
+					touch .gitignore cant create in directory use cmd or bash
+					then git add . and youll see that whatever files you type inside will not get staged
+					so this is for files we dont want to include into our repository in the staging area that is...
+					to put whole folder put folder name 
+					if you put *.txt it will  get all .txtfiles
+					
+					
+			BRANCHES  
+					git branch branchname   to create then checkout
+					git checkout branchname to get into a branch
+					git checkout master back to master..
+			
+			MERGE
+					while in the master branch
+					git merge branchname
+					press i then add a message then uncommented
+					esc :wq  enter
+			
+			Repository into github
+					dont forget to git init first in the computer folder
+					so go to github.com, make new repository in hub first, copy and past into the 
+					commandline 
+					this aint perfect, instructions in the github thingie once you create repo...
+					*	git remote add origin https://github.com/Joe-Powell/new.git
+					*   git push -u origin master
+					* enter uname/password prompt
+					then everytime you make changes, youll first 
+					*git add .
+					 then git commit -m 'added changes' in bash..
+						command line message, then esc then :wq    
+					 now its added to local computer
+					 we havent actually pushed it yet so..
+					 then git push 	then it will push right to github
+					
+			TO CLONE   this is an easy way to clone without having to download a zip
+				create folder, open with bash so right click on empty folder then in comand
+				line type git clone then paste in clone url inside the code of repository 
+		
+			PULL is where you make changes on github itself and pull into your computer
+					or if  someone sends changes to your github repo and you pulll it in
+					
+					
+					
+					
+					
+					

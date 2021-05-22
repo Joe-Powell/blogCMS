@@ -1,0 +1,61 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box; 
+  }
+ 
+ 
+ /* Nav bar */
+
+ nav {
+    width: 100vw;
+    height: 50px;
+    position: fixed;
+    z-index: 2;
+    background-color: darkcyan;
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+
+    margin-bottom: 40px;;
+
+}
+
+nav h3 {
+    height: fit-content;
+    width: fit-content;
+    padding: 5px;
+}
+
+ nav ul {
+    display: flex;
+    height: fit-content;
+    width: fit-content;
+    /* padding-right: 30px; */
+
+ }
+
+  ul li {
+      list-style: none;
+      padding: 5px;
+  }
+  
+  li a {
+      text-decoration: none;
+  }
+
+    li button {
+        padding:2px;
+    }
+
+
+  /* Nav bar end */
+
+
+   /* since everything is inside the body,such as the fixed div, 
+        everything moves if you put margin top on the body. So I needed 
+        a containAll div to moive it down below the navbar */
+.containAll {
+    padding-top: 100px;
+
+}

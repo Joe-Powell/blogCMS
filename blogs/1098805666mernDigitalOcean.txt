@@ -1,0 +1,10 @@
+
+*to work mongodb in digital ocean, make sure there is a DB_CONN in the .env or wherever. 
+	cuz you tend to delete it in github..
+	
+* how to install mongodb
+	sudo apt update
+	sudo apt install -y mongodb
+	
+	then, check the service’s status:
+	sudo systemctl status mongodb
