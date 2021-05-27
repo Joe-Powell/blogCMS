@@ -7,13 +7,13 @@
 \\----------------------------------------------------------------------------------------------------------\\
 
 
-the database:  http://localhost/phpmyadmin/db_structure.php?db=blogcms
 
-||--------------Image uploads------------------------------------||
+||--------------Image uploads & images in your blog------------------------------------||
         
 $file_destination = './uploads/' . $fileName;        /* removed the random number to put image <image src='' > inside the blog .php or html */
 move_uploaded_file($fileTmpName, $file_destination);
 
+/* So make sure you  use <image src='./uploads/filename.PNG' >  Inside your php or html file!! */
 to upload and save a blog?
 
 must be a .txt file to be able to read

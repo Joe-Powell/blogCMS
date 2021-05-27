@@ -3,3 +3,6 @@
             http://localhost/blogCMS/admin.php
 
             http://localhost/blogCMS
+
+
+            the database:  http://localhost/phpmyadmin/db_structure.php?db=blogcms
