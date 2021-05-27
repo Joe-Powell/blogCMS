@@ -1,15 +1,23 @@
-add some columns to database and in admin.php  Read more...
-add a column for url afterthe readme
+||----------------------Navbar show Admin button--------------------------||
+
+  <?php if (isset($_SESSION['uid']) && $_SESSION['uid'] == 1) { ?>
+        <li><a href="http://localhost/blogCMS/admin.php"><button class='linkToAdmin'>Admin Page</button></a></li>
+        <?php } ?>
+
+\\----------------------------------------------------------------------------------------------------------\\
 
 
-=======================================================
-lets use 
+the database:  http://localhost/phpmyadmin/db_structure.php?db=blogcms
+
+||--------------Image uploads------------------------------------||
         
-        $file_destination = './blogs/' . $fileName;
-        move_uploaded_file($fileTmpName, $file_destination);
+$file_destination = './uploads/' . $fileName;        /* removed the random number to put image <image src='' > inside the blog .php or html */
+move_uploaded_file($fileTmpName, $file_destination);
 
 to upload and save a blog?
 
 must be a .txt file to be able to read
 
-=====================================
+if ($_FILES['upload1']['size'] !== 0) { }  so if image is not uploaded
+
+\\---------------------------------------------------------------\\

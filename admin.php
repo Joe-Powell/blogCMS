@@ -6,6 +6,7 @@ if (isset($_POST['submitForm'])) {
     $title = $_POST['title'];
     $readmore = $_POST['readmore'];
 
+
     //$blog_url = $_POST['blog_url'];
     //$blog_url = $_POST['blog_url'];
     //$upload1 = $_POST['upload1'];
@@ -31,7 +32,7 @@ if (isset($_POST['submitForm'])) {
         echo $fileType . '<br>';
         echo $fileTmpName . '<br>';
 
-        $file_destination = './uploads/' . mt_rand() . $fileName;
+        $file_destination = './uploads/' . $fileName;
         move_uploaded_file($fileTmpName, $file_destination);
     } else {
         $file_destination = '';
@@ -48,7 +49,7 @@ if (isset($_POST['submitForm'])) {
         echo $fileTmpNames . '<br>';
 
         if (!empty($fileNames)) {
-            $file_destinations = './blogs/' . mt_rand() .  $fileNames;
+            $file_destinations = './blogs/' . mt_rand()  . $fileNames;
         }
         move_uploaded_file($fileTmpNames, $file_destinations);
     }
@@ -73,6 +74,7 @@ if (isset($_POST['submitForm'])) {
 
 
     <link rel="stylesheet" href="styleAdmin.css">
+    <link rel="stylesheet" href="styleNavBar.css">
 </head>
 
 <body>
@@ -85,6 +87,11 @@ if (isset($_POST['submitForm'])) {
     <section class="containAll">
         <form type='text' name='postForm' action='admin.php' method='post' class='postForm' id='postForm' enctype="multipart/form-data">
 
+            <div class="session_id">
+                <label for='session_id' id='session_id_label'>ID:</label>
+                <input type='text' name='session_id' id='session_id' value='<?php echo $_SESSION['uid'] ?>'>
+            </div>
+
             <div class='titleDiv'>
                 <h3>Blog Post</h3>
                 <h5 id='msg'></h5>
@@ -96,12 +103,14 @@ if (isset($_POST['submitForm'])) {
             </div>
 
 
-            <div class='uploadFileDiv'>
+            <div class='uploadFileDiv1'>
                 <label for="upload1">Image:</label>
                 <input type="file" name='upload1' class='upload1' id='upload1'>
             </div>
-            <div class='uploadFileDiv'>
-                <label for="upload2"><span class='mustFill'>*</span>Blog ( .txt .html .php extensions)</label>
+            <div class='uploadFileDiv2'>
+                <label for="upload2"><span class='mustFill'>*</span>
+                    <h5>Blog ( .txt .html .php extensions)</h5>
+                </label>
                 <input type="file" name='upload2' class='upload2' id='upload2'>
             </div>
 

@@ -15,6 +15,7 @@ require './database/db_conn.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home page</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleNavBar.css">
 </head>
 
 <body>
@@ -45,7 +46,7 @@ require './database/db_conn.php';
                 <h1><?php echo $blogPosts['title'] ?></h1>
 
                 <?php if ($blogPosts['filename']) {  ?>
-                    <img src='<?= $blogPosts['filename']  ?>' width='150'>
+                    <img src='<?= $blogPosts['filename']  ?>' width='150' />
                 <?php } ?>
 
                 <div class="overlay">

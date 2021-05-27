@@ -41,8 +41,12 @@ nav h3 {
   }
   
   li a {
-      text-decoration: none;
-  }
+    text-decoration: none;
+    color:black;
+    }
+  .home_btn {
+    color:yellow;
+    }
 
     li button {
         padding:2px;
